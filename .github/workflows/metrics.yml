@@ -1,0 +1,27 @@
+name: Issue and PR Metrics
+
+on:
+  schedule:
+    # Run on the first day of every month
+    - cron: '0 0 1 * *'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  issues: read
+  pull-requests: read
+
+jobs:
+  metrics:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Get metrics
+        uses: github/issue-metrics@v2
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+          SEARCH_QUERY: 'repo:${{ github.repository }} is:issue created:>=${{ github.event.schedule || github.event.workflow_dispatch.created_at }}'
+
+      - name: Create report
+        run: |
+          echo "Monthly metrics report generated"
+          echo "See action logs for details"
