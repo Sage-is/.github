@@ -81,7 +81,7 @@ updates:
       - "Sage-is/maintainers"
     labels:
       - "dependencies"
-      - "golang"
+      - "go"
     commit-message:
       prefix: "chore"
       include: "scope"
