@@ -1,52 +1,73 @@
----
 name: 📝 Documentation
-about: Suggest improvements to documentation
+description: Suggest improvements to documentation
 title: '[DOCS] '
 labels: ['documentation', 'triage']
-assignees: ''
----
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve our documentation!
 
-## Documentation Issue
+  - type: textarea
+    id: issue
+    attributes:
+      label: Documentation Issue
+      description: Describe the documentation issue or improvement needed.
+      placeholder: What needs to be improved?
+    validations:
+      required: true
 
-Describe the documentation issue or improvement needed.
+  - type: checkboxes
+    id: type
+    attributes:
+      label: Type of Documentation
+      options:
+        - label: README
+        - label: API Documentation
+        - label: Tutorial/Guide
+        - label: Code Comments
+        - label: Examples
+        - label: Other
 
-## Type of Documentation
+  - type: textarea
+    id: current
+    attributes:
+      label: Current State
+      description: Describe what the current documentation says (or doesn't say).
+      placeholder: Current documentation...
+    validations:
+      required: true
 
-- [ ] README
-- [ ] API Documentation
-- [ ] Tutorial/Guide
-- [ ] Code Comments
-- [ ] Examples
-- [ ] Other (please specify)
+  - type: textarea
+    id: proposed
+    attributes:
+      label: Proposed Changes
+      description: Describe what you think the documentation should say instead.
+      placeholder: Proposed documentation...
+    validations:
+      required: true
 
-## Current State
+  - type: input
+    id: file
+    attributes:
+      label: File Location
+      placeholder: e.g., README.md, docs/api.md
 
-Describe what the current documentation says (or doesn't say).
+  - type: input
+    id: section
+    attributes:
+      label: Section
+      placeholder: e.g., Installation, Configuration
 
-## Proposed Changes
+  - type: textarea
+    id: why
+    attributes:
+      label: Why This Matters
+      description: Explain why this documentation change is important.
+      placeholder: Why is this important?
 
-Describe what you think the documentation should say instead.
-
-## Location
-
-Where is this documentation located?
-
-- **File**: [e.g., README.md, docs/api.md]
-- **Section**: [e.g., Installation, Configuration]
-- **URL**: [if applicable]
-
-## Why This Matters
-
-Explain why this documentation change is important:
-
-- Does it address a common confusion?
-- Does it fill a gap in the documentation?
-- Does it improve clarity or accuracy?
-
-## Additional Context
-
-Add any other context or examples about the documentation issue here.
-
-## Related Issues
-
-- Link to related issues (if any)
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context or examples about the documentation issue here.

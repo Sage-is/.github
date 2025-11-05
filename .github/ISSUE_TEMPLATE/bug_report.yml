@@ -1,52 +1,90 @@
----
 name: 🐛 Bug Report
-about: Create a report to help us improve
+description: Create a report to help us improve
 title: '[BUG] '
 labels: ['bug', 'triage']
-assignees: ''
----
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
 
-## Bug Description
+  - type: textarea
+    id: description
+    attributes:
+      label: Bug Description
+      description: A clear and concise description of what the bug is.
+      placeholder: Describe the bug...
+    validations:
+      required: true
 
-A clear and concise description of what the bug is.
+  - type: textarea
+    id: reproduce
+    attributes:
+      label: Steps to Reproduce
+      description: Steps to reproduce the behavior
+      placeholder: |
+        1. Go to '...'
+        2. Click on '...'
+        3. Scroll down to '...'
+        4. See error
+    validations:
+      required: true
 
-## Steps to Reproduce
+  - type: textarea
+    id: expected
+    attributes:
+      label: Expected Behavior
+      description: A clear and concise description of what you expected to happen.
+      placeholder: What did you expect?
+    validations:
+      required: true
 
-Steps to reproduce the behavior:
+  - type: textarea
+    id: actual
+    attributes:
+      label: Actual Behavior
+      description: A clear and concise description of what actually happened.
+      placeholder: What actually happened?
+    validations:
+      required: true
 
-1. Go to '...'
-2. Click on '...'
-3. Scroll down to '...'
-4. See error
+  - type: textarea
+    id: screenshots
+    attributes:
+      label: Screenshots
+      description: If applicable, add screenshots to help explain your problem.
+      placeholder: Drag and drop images here or paste them
 
-## Expected Behavior
+  - type: input
+    id: os
+    attributes:
+      label: Operating System
+      placeholder: e.g., macOS 13.0, Ubuntu 22.04, Windows 11
+    validations:
+      required: true
 
-A clear and concise description of what you expected to happen.
+  - type: input
+    id: browser
+    attributes:
+      label: Browser
+      placeholder: e.g., Chrome 120, Firefox 121, Safari 17
+      
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      placeholder: e.g., v1.2.3
+    validations:
+      required: true
 
-## Actual Behavior
+  - type: textarea
+    id: additional
+    attributes:
+      label: Additional Context
+      description: Add any other context about the problem here.
 
-A clear and concise description of what actually happened.
-
-## Screenshots
-
-If applicable, add screenshots to help explain your problem.
-
-## Environment
-
-- **OS**: [e.g., macOS 13.0, Ubuntu 22.04, Windows 11]
-- **Browser**: [e.g., Chrome 120, Firefox 121, Safari 17] (if applicable)
-- **Version**: [e.g., v1.2.3]
-- **Node Version**: [e.g., v20.0.0] (if applicable)
-- **Other relevant environment details**:
-
-## Additional Context
-
-Add any other context about the problem here.
-
-## Possible Solution
-
-If you have suggestions on how to fix the bug, please describe them here.
-
-## Related Issues
-
-- Link to related issues (if any)
+  - type: textarea
+    id: solution
+    attributes:
+      label: Possible Solution
+      description: If you have suggestions on how to fix the bug, please describe them here.
