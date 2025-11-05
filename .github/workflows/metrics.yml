@@ -15,11 +15,15 @@ jobs:
   metrics:
     runs-on: ubuntu-latest
     steps:
+      - name: Get current date
+        id: date
+        run: echo "date=$(date -d '30 days ago' '+%Y-%m-%d')" >> $GITHUB_OUTPUT
+
       - name: Get metrics
         uses: github/issue-metrics@v2
         env:
           GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
-          SEARCH_QUERY: 'repo:${{ github.repository }} is:issue created:>=${{ github.event.schedule || github.event.workflow_dispatch.created_at }}'
+          SEARCH_QUERY: 'repo:${{ github.repository }} is:issue created:>=${{ steps.date.outputs.date }}'
 
       - name: Create report
         run: |

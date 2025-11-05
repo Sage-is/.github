@@ -51,7 +51,7 @@ jobs:
         uses: actions/github-script@v7
         with:
           script: |
-            const files = `${{ steps.check-files.outputs.files }}`;
+            const files = process.env.FILES_MISSING;
             const body = `## Repository Health Check Alert
             
             The following required community health files are missing:
@@ -71,6 +71,8 @@ jobs:
               body: body,
               labels: ['health-check', 'documentation']
             });
+        env:
+          FILES_MISSING: ${{ steps.check-files.outputs.files }}
 
       - name: Check branch protection
         run: |
