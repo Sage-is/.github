@@ -4,7 +4,13 @@ Community health files and default configurations for [Sage.is](https://sage.is)
 
 ## About
 
-This repository contains default community health files that are automatically used across all repositories in the Sage-is organization. These files help maintain consistency, quality, and community standards across all our projects.
+This repository contains default community health files that GitHub automatically makes available to all public
+repositories in the Sage-is organization. Using GitHub's
+[default community health files feature](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file),
+these files help maintain consistency, quality, and community standards across all our projects.
+
+**Important**: This is not a repository that needs to be cloned or manually integrated. GitHub automatically uses
+these files as fallbacks for any repository in the organization that doesn't have its own versions.
 
 ## What's Included
 
@@ -38,16 +44,33 @@ This repository contains default community health files that are automatically u
 
 ## How It Works
 
-GitHub automatically applies these files to all repositories in the Sage-is organization that don't have their own versions. This ensures:
+This repository leverages GitHub's
+[default community health files feature](https://docs.github.com/en/communities/setting-up-your-project-for-healthy-contributions/creating-a-default-community-health-file).
+When a repository named `.github` exists in an organization, GitHub automatically makes its community health files
+available to all public repositories in that organization.
+
+**No cloning or setup required!** GitHub automatically:
+
+- Displays these files when they're accessed in repositories that don't have their own versions
+- Shows links to them in repository insights and community profile
+- Makes issue and PR templates available when creating new issues or pull requests
+- Applies CODEOWNERS rules for automated review requests
+
+This ensures:
 
 - Consistent contributor experience across all projects
 - Standardized issue and PR templates
 - Unified community guidelines
 - Automated workflows and processes
 
+**Note**: This is different from using a `.github` repository for organization branding (profile README). This
+repository serves as a **fallback** for community health files across all organization repositories.
+
 ## Repository-Specific Overrides
 
-Individual repositories can override any of these defaults by including their own versions of these files. This allows projects with special requirements to maintain their own policies while still benefiting from organization-wide defaults.
+Individual repositories can override any of these defaults by including their own versions of these files. This
+allows projects with special requirements to maintain their own policies while still benefiting from
+organization-wide defaults.
 
 ## Workflows
 
@@ -76,10 +99,11 @@ If you're contributing to any Sage.is project:
 
 If you're maintaining a Sage.is project:
 
-1. These files are automatically available in your repository
-2. Override them by creating your own versions if needed
-3. Keep CODEOWNERS up to date with your team structure
-4. Customize issue templates for project-specific needs
+1. **No action needed** - These files are automatically available via GitHub's feature (no cloning required)
+2. Your repository will use these defaults unless you create your own versions
+3. To override: Simply create your own version of any file in your repository
+4. Keep CODEOWNERS up to date with your team structure
+5. Customize issue templates for project-specific needs
 
 ## Development
 
@@ -115,6 +139,37 @@ yamllint -c .yamllint.yml .
 - **Website**: [https://sage.is](https://sage.is)
 - **Organization**: [https://github.com/Sage-is](https://github.com/Sage-is)
 - **Documentation**: See individual files in this repository
+
+## Frequently Asked Questions
+
+### Do I need to clone this repository?
+
+**No.** This repository uses GitHub's built-in feature for default community health files. GitHub automatically
+provides these files to all repositories in the Sage-is organization. You don't need to clone, fork, or manually
+copy anything.
+
+### How is this different from organization branding?
+
+While a `.github` repository can be used for organization branding (like a profile README), this repository
+primarily serves as a **central location for default community health files**. GitHub automatically uses these
+files as fallbacks across all organization repositories.
+
+### What files are automatically used?
+
+GitHub automatically provides the following files from this repository to other repos in the organization:
+
+- CODE_OF_CONDUCT.md
+- CONTRIBUTING.md
+- SECURITY.md
+- SUPPORT.md
+- FUNDING.yml
+- Issue and PR templates
+- Workflow files (for organization-wide automation)
+
+### How do I customize for my specific repository?
+
+Simply create your own version of any file in your repository. Your local version will always take precedence over
+the organization default.
 
 ## License
 
