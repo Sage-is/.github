@@ -1,0 +1,41 @@
+# Code Owners
+#
+# This file defines individuals or teams responsible for code in this repository.
+# Code owners are automatically requested for review when someone opens a pull
+# request that modifies code they own.
+#
+# Order is important; the last matching pattern takes precedence.
+#
+# Documentation: https://docs.github.com/en/repositories/managing-your-repositorys-settings-and-features/customizing-your-repository/about-code-owners
+
+# Default owners for everything in the repo
+# These owners will be requested for review unless a later match takes precedence.
+* @Sage-is/maintainers
+
+# Documentation
+*.md @Sage-is/documentation
+/docs/ @Sage-is/documentation
+
+# GitHub configuration files
+/.github/ @Sage-is/maintainers
+
+# Workflow files
+/.github/workflows/ @Sage-is/maintainers @Sage-is/devops
+
+# Security and policy files
+/SECURITY.md @Sage-is/security
+/CODE_OF_CONDUCT.md @Sage-is/maintainers
+/CONTRIBUTING.md @Sage-is/maintainers
+
+# Configuration files
+*.yml @Sage-is/devops
+*.yaml @Sage-is/devops
+*.json @Sage-is/devops
+
+# CI/CD
+/.github/workflows/ @Sage-is/devops
+/.github/dependabot.yml @Sage-is/devops
+
+# Legal and licensing
+/LICENSE @Sage-is/legal
+/CITATION.cff @Sage-is/maintainers

@@ -1,0 +1,52 @@
+---
+name: 📝 Documentation
+about: Suggest improvements to documentation
+title: '[DOCS] '
+labels: ['documentation', 'triage']
+assignees: ''
+---
+
+## Documentation Issue
+
+Describe the documentation issue or improvement needed.
+
+## Type of Documentation
+
+- [ ] README
+- [ ] API Documentation
+- [ ] Tutorial/Guide
+- [ ] Code Comments
+- [ ] Examples
+- [ ] Other (please specify)
+
+## Current State
+
+Describe what the current documentation says (or doesn't say).
+
+## Proposed Changes
+
+Describe what you think the documentation should say instead.
+
+## Location
+
+Where is this documentation located?
+
+- **File**: [e.g., README.md, docs/api.md]
+- **Section**: [e.g., Installation, Configuration]
+- **URL**: [if applicable]
+
+## Why This Matters
+
+Explain why this documentation change is important:
+
+- Does it address a common confusion?
+- Does it fill a gap in the documentation?
+- Does it improve clarity or accuracy?
+
+## Additional Context
+
+Add any other context or examples about the documentation issue here.
+
+## Related Issues
+
+- Link to related issues (if any)

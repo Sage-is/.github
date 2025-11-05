@@ -1,0 +1,18 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it as below."
+title: "Sage.is"
+abstract: "Community health files and organization configuration for Sage.is projects"
+type: software
+authors:
+  - name: "Sage.is"
+    website: "https://sage.is"
+repository-code: "https://github.com/Sage-is/.github"
+url: "https://sage.is"
+license: AGPL-3.0-or-later
+keywords:
+  - github
+  - community
+  - open-source
+  - configuration
+date-released: 2025-11-05
+version: "0.1.0"

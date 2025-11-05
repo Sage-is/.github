@@ -1,0 +1,73 @@
+# Labeler configuration for auto-labeling PRs based on changed files
+
+# Documentation
+'documentation':
+  - '**/*.md'
+  - 'docs/**/*'
+
+# Configuration files
+'configuration':
+  - '**/*.yml'
+  - '**/*.yaml'
+  - '**/*.json'
+  - '**/*.toml'
+  - '**/*.ini'
+  - '**/*.conf'
+  - '.github/**/*'
+
+# GitHub Actions
+'github-actions':
+  - '.github/workflows/**/*'
+
+# Dependencies
+'dependencies':
+  - 'package.json'
+  - 'package-lock.json'
+  - 'requirements.txt'
+  - 'Pipfile'
+  - 'Pipfile.lock'
+  - 'go.mod'
+  - 'go.sum'
+  - 'Cargo.toml'
+  - 'Cargo.lock'
+  - 'pom.xml'
+  - 'build.gradle'
+
+# Security
+'security':
+  - 'SECURITY.md'
+  - '.github/workflows/codeql.yml'
+  - '.github/workflows/dependency-review.yml'
+
+# Tests
+'tests':
+  - '**/*.test.*'
+  - '**/*.spec.*'
+  - 'tests/**/*'
+  - 'test/**/*'
+  - '__tests__/**/*'
+
+# Source code by language
+'javascript':
+  - '**/*.js'
+  - '**/*.jsx'
+  - '**/*.ts'
+  - '**/*.tsx'
+
+'python':
+  - '**/*.py'
+
+'go':
+  - '**/*.go'
+
+'rust':
+  - '**/*.rs'
+
+'java':
+  - '**/*.java'
+
+# Docker
+'docker':
+  - 'Dockerfile'
+  - 'docker-compose.yml'
+  - '.dockerignore'
